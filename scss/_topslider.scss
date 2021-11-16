@@ -1,0 +1,74 @@
+.swiper-head {
+  height: 1100px;
+}
+
+.swiper-background {
+  width: 100%;
+}
+
+.headSwiper {
+  .swiper-text {
+    width: 500px;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    color: white;
+    font-family: "Lato-light";
+  }
+  .swiper-text-h1 {
+    font-size: 65px;
+    font-weight: normal;
+  }
+  .swiper-text-p {
+    font-weight: bold;
+    line-height: 25px;
+    margin: 10px 0px;
+  }
+  .swiper-button-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 94px;
+    height: 50px;
+    right: 20%;
+    bottom: 100px;
+  }
+  .swiper-button-next {
+    background-color: $red;
+    color: white;
+    padding: 0px 5px;
+    height: 35px;
+
+    &::after {
+      font-size: 10px;
+      font-weight: bold;
+    }
+  }
+  .swiper-button-prev {
+    background-color: $red;
+    color: white;
+    padding: 0px 5px;
+    height: 35px;
+
+    &::after {
+      font-size: 10px;
+      font-weight: bold;
+    }
+  }
+}
+.diagonal-box {
+  position: relative;
+  transform: skewY(0.5deg);
+  height: 100px;
+  top: -80px;
+  z-index: 1;
+  background-color: transparentize($color: white, $amount: 0.5);
+}
+.diagonal-box-white {
+  position: relative;
+  background-color: white;
+  transform: skewY(2deg);
+  height: 70px;
+  top: -140px;
+  z-index: 1;
+}
