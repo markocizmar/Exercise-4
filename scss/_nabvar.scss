@@ -1,0 +1,55 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  z-index: 5;
+}
+
+.navbar-container {
+  display: flex;
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-item {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-link {
+  display: flex;
+  font-family: "Lato";
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+
+  &:hover {
+    color: $orange;
+    background-color: transparentize($color: white, $amount: 0.5);
+  }
+}
+
+.icon-cheveron-down {
+  margin-left: 5px;
+  margin-top: 3px;
+}

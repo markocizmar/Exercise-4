@@ -1,13 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1>hello world</h1>
-</body>
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="navbar-container">
+          <img class="navbar-logo" src="./img/logo.png" alt="Page logo" />
+          <nav class="navbar">
+            <div class="nav-item">
+              <a class="nav-link" href="#">Commercial</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="#"
+                >Industrial<span class="icon-cheveron-down"></span
+              ></a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="#">Infrastructure</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="#">Resources</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="#">Utilities</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="swiper-head">
+      <div class="swiper headSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              class="swiper-background"
+              src="./img/wheat.png"
+              alt="Header background"
+            />
+            <div class="swiper-text">
+              <h1 class="swiper-text-h1">I want to feel what you wanted</h1>
+              <p class="swiper-text-p">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos non earum eos assumenda minus iusto sint quis, quod
+                deleniti sequi alias cupiditate natus mollitia, molestiae eius
+                dolorem dolorum rerum.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="swiper-background"
+              src="./img/windmill.jpg"
+              alt="Header background"
+            />
+            <div class="swiper-text">
+              <h1 class="swiper-text-h1">Donec nec fringilla elit</h1>
+              <p class="swiper-text-p">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos non earum eos assumenda minus iusto sint quis, quod
+                deleniti sequi alias cupiditate natus mollitia, molestiae eius
+                dolorem dolorum rerum.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="swiper-background"
+              src="./img/grass.jpg"
+              alt="Header background"
+            />
+            <div class="swiper-text">
+              <h1 class="swiper-text-h1">Sed ultricies vel tortor quis</h1>
+              <p class="swiper-text-p">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos non earum eos assumenda minus iusto sint quis, quod
+                deleniti sequi alias cupiditate natus mollitia, molestiae eius
+                dolorem dolorum rerum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-container">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div class="diagonal-box"></div>
+      <div class="diagonal-box-white"></div>
+    </section>
+
+    <section class="quote-slider">
+      <div class="quote-limiter">
+        <div class="swiper quoteSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              eligendi dolorem sint repellendus nobis ipsa molestias tempore ex?
+              Aliquam eius autem tempore labore impedit, adipisci unde vel
+              facilis quos eligendi."
+            </div>
+            <div class="swiper-slide">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              distinctio assumenda inventore delectus provident quasi deserunt
+              soluta, sequi officia, quis harum esse dolorem obcaecati. Dolorum
+              soluta vitae labore debitis ad!"
+            </div>
+            <div class="swiper-slide">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              ipsam alias sequi nostrum, ea quia dolore eius dicta optio tempora
+              quidem quisquam temporibus labore, expedita sint. Velit qui quis
+              vero?"
+            </div>
+          </div>
+          <div class="swiper-button-container">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="quote">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis unde
+            eveniet temporibus reprehenderit voluptate deleniti officia illum ex
+            eaque similique mollitia, excepturi, esse dolorem laboriosam
+            consequuntur accusamus quidem. Ut, id?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
