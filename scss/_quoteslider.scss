@@ -1,7 +1,7 @@
 .quote-slider {
   z-index: 99;
-  margin-top: 50px;
-  height: 1000px;
+  margin: 50px auto;
+  font-family: "Lato";
 }
 
 .quote-limiter {
@@ -11,15 +11,34 @@
 }
 
 .quoteSwiper {
-  flex: 0 0 40%;
+  flex: 0 0 30%;
   width: 100%;
-  height: 200px;
+  height: 350px;
   border-right: 1px solid lightgray;
+  overflow: visible;
+  overflow-y: visible;
+  overflow-x: hidden;
 
   .swiper-slide {
-    text-align: center;
-    font-size: 18px;
+    text-align: start;
     background: #fff;
+    color: $orange;
+  }
+  .swiper-slide-p {
+    font-family: "Lato-italic";
+    line-height: 35px;
+    width: 300px;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  .slide-apostrophe {
+    font-size: 50px;
+    position: absolute;
+  }
+  .slide-apostrophe-bottom {
+    font-size: 50px;
+    position: relative;
+    bottom: -40px;
   }
   .swiper-button-container {
     display: flex;
@@ -28,7 +47,7 @@
     width: 94px;
     height: 50px;
     right: 20%;
-    bottom: 50px;
+    bottom: 10px;
   }
   .swiper-button-next {
     background-color: $orange;
@@ -54,5 +73,17 @@
   }
 }
 .quote {
-  flex: 0 0 50%;
+  flex: 0 0 60%;
+}
+.quote-h1 {
+  color: $orange;
+  font-family: "Lato-light";
+  font-size: 30px;
+}
+
+.quote-p {
+  margin: 10px 0px;
+  line-height: 30px;
+  font-size: 18px;
+  color: $gray;
 }
