@@ -36,16 +36,3 @@ var quoteSwiper = new Swiper(".quoteSwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-let test = document.getElementById("open-submenu");
-let go = document.getElementById("opened-submenu");
-let sub = document.querySelector(".expandable");
-
-test.addEventListener("mouseover", function (event) {
-  go.classList.add("active");
-  sub.classList.add("active");
-});
-test.addEventListener("mouseleave", function (event) {
-  go.classList.remove("active");
-  sub.classList.remove("active");
-});
