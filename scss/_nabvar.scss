@@ -66,6 +66,10 @@
   }
 }
 
+.expandable {
+  justify-content: center;
+}
+
 .nav-expandable {
   display: none;
   position: absolute;
@@ -124,7 +128,17 @@
   }
 }
 
+@media screen and(max-width:1400px) {
+  .nav-expandable {
+    width: 80%;
+    left: 10%;
+  }
+}
+
 @media screen and (max-width: 900px) {
+  .navbar {
+    width: 80%;
+  }
   .navigation {
     margin: 0px;
     background-color: $orange;
@@ -137,10 +151,13 @@
     width: 100%;
     left: 0;
   }
-  .expandable {
-    &.active {
-      color: $orange;
-      background-color: white;
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    &:hover .expandable {
       border-top: 20px solid $orange;
       border-bottom: 20px solid white;
       height: 60px;
@@ -149,10 +166,16 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .navbar {
     position: fixed;
-    left: -100%;
+    right: -110%;
     top: -20px;
     flex-direction: column;
     background-color: $orange;
@@ -166,8 +189,64 @@
     justify-content: flex-start;
 
     &.active {
-      left: 0;
+      right: -20%;
     }
+  }
+
+  .nav-item {
+    height: 50px;
+
+    &:hover .expandable {
+      color: white;
+      background-color: $orange;
+      padding-bottom: 0px;
+      border-top: none;
+      border-bottom: none;
+      height: 50px;
+      padding-bottom: 0px;
+    }
+
+    &:hover .nav-expandable {
+      display: block;
+    }
+  }
+
+  .nav-link.expandable {
+    width: 75%;
+    justify-content: space-between;
+  }
+  .nav-link {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  .nav-expandable {
+    background-color: $orange;
+  }
+
+  .submenu {
+    flex-direction: column;
+  }
+  .nav-submenu {
+    margin-left: 30px;
+    margin-bottom: 5px;
+    width: 70%;
+  }
+  .submenu-h2 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: none;
+    text-align: start;
+  }
+  .submenu-a {
+    color: white;
+    margin: 5px 0px;
+    font-size: 16px;
+    text-align: start;
+    padding-left: 30px;
   }
 
   .hamburger {
@@ -176,13 +255,12 @@
     cursor: pointer;
     z-index: 15;
     top: 20px;
-    right: 30px;
+    right: 20px;
   }
 
   .hamburger.active {
     width: 100%;
-    margin: auto;
-    right: auto;
+    right: -7.5%;
     position: fixed;
   }
 
