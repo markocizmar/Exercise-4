@@ -1,12 +1,17 @@
-.swiper-head {
-  height: 1100px;
-}
-
 .swiper-background {
   width: 100%;
 }
 
 .headSwiper {
+  height: inherit;
+
+  .swiper-slide {
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
   .swiper-text {
     width: 500px;
     position: absolute;
@@ -27,11 +32,12 @@
   .swiper-button-container {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: relative;
     width: 94px;
     height: 50px;
-    right: 20%;
-    bottom: 100px;
+    float: right;
+    margin-right: 20%;
+    bottom: 150px;
   }
   .swiper-button-next {
     background-color: $red;
@@ -56,19 +62,41 @@
     }
   }
 }
-.diagonal-box {
-  position: relative;
-  transform: skewY(0.5deg);
-  height: 100px;
-  top: -80px;
-  z-index: 1;
-  background-color: transparentize($color: white, $amount: 0.5);
+
+@include tablet {
+  .headSwiper {
+    .swiper-slide img {
+      min-height: 600px;
+    }
+    .swiper-text {
+      width: 300px;
+      width: 50%;
+      left: 5%;
+    }
+    .swiper-text-h1 {
+      font-size: 40px;
+    }
+    .swiper-text-p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    .swiper-button-container {
+      margin-right: 5%;
+    }
+  }
 }
-.diagonal-box-white {
-  position: relative;
-  background-color: white;
-  transform: skewY(2deg);
-  height: 70px;
-  top: -140px;
-  z-index: 1;
+
+@include mobile {
+  .headSwiper {
+    .swiper-text {
+      width: 90%;
+    }
+    .swiper-text-h1 {
+      font-size: 30px;
+    }
+    .swiper-text-p {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
 }
