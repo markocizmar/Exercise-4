@@ -10,6 +10,11 @@
   justify-content: space-between;
   max-width: 1200px;
   padding-top: 50px;
+
+  @include tablet {
+    margin: auto 50px;
+    flex-direction: column;
+  }
 }
 
 .footer-inner {
@@ -17,6 +22,11 @@
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+
+  @include tablet {
+    margin-bottom: 50px;
+    justify-content: space-between;
+  }
 }
 
 .footer {
@@ -24,6 +34,10 @@
   flex-direction: column;
   color: white;
   font-family: "Lato";
+
+  @include mobile {
+    display: none;
+  }
 
   h3 {
     margin-bottom: 10px;
@@ -45,21 +59,7 @@
   }
 }
 
-@include tablet {
-  .footer-container {
-    margin: auto 50px;
-    flex-direction: column;
-  }
-  .footer-inner {
-    margin-bottom: 50px;
-    justify-content: space-between;
-  }
-}
-
 @include mobile {
-  .footer {
-    display: none;
-  }
   .footer-1 {
     display: flex;
 
