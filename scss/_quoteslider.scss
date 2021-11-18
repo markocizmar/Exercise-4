@@ -109,7 +109,7 @@
   color: $gray;
 }
 
-@media screen and (max-width: 1024px) {
+@include tablet {
   .quoteSwiper {
     flex: 0 0 45%;
   }
@@ -125,7 +125,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@include mobile {
   .quote-limiter {
     flex-direction: column;
     width: 90%;

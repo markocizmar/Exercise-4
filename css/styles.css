@@ -199,7 +199,7 @@
   background-color: white;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .navbar {
     width: 80%;
   }
@@ -230,7 +230,7 @@
     padding-bottom: 0px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar {
     position: fixed;
     right: -110%;
@@ -400,7 +400,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .headSwiper .swiper-slide img {
     min-height: 600px;
   }
@@ -420,7 +420,7 @@
     margin-right: 5%;
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .headSwiper .swiper-text {
     width: 90%;
   }
@@ -542,7 +542,7 @@
   color: #7e868e;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .quoteSwiper {
     flex: 0 0 45%;
   }
@@ -560,7 +560,7 @@
     font-size: 2vw;
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .quote-limiter {
     flex-direction: column;
     width: 90%;
@@ -639,7 +639,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .footer-container {
     margin: auto 50px;
     flex-direction: column;
@@ -650,7 +650,7 @@
     justify-content: space-between;
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .footer {
     display: none;
   }
