@@ -1,0 +1,184 @@
+.commercial-navbar {
+  background-color: $orange;
+  margin-top: 0px;
+  .navbar-logo {
+    height: 80%;
+    margin: auto 10px;
+  }
+}
+.commSwiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    transition: filter 1s;
+
+    &-prev {
+      filter: brightness(80%);
+      transition: filter 1s;
+    }
+
+    &-active {
+      img {
+        filter: brightness(50%);
+        transition: filter 1s;
+
+        &:hover {
+          filter: brightness(40%);
+          transition: filter 1s;
+          cursor: pointer;
+        }
+      }
+
+      h2 {
+        display: block !important;
+      }
+
+      &:hover p {
+        display: block;
+      }
+      &:hover h2 {
+        top: 35% !important;
+      }
+    }
+
+    &-next {
+      filter: brightness(80%);
+      transition: filter 1s;
+    }
+
+    .swiper-image-div {
+      position: relative;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-text-div {
+      font-family: "Lato";
+    }
+
+    h2,
+    p {
+      font-weight: normal;
+      display: none;
+      color: white;
+      position: absolute;
+      font-size: 35px;
+      top: 40%;
+      transform: translateY(-40%);
+      width: 100%;
+    }
+
+    p {
+      line-height: 25px;
+      margin-top: 100px;
+      font-size: initial;
+    }
+  }
+
+  .swiper-button-container {
+    @include swiper-btn-container();
+    bottom: 0px;
+    float: none;
+    margin: 20px auto;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    @include swiper-btn();
+  }
+}
+
+.commercial-read {
+  max-width: 800px;
+  margin: auto;
+  font-family: "Lato-light";
+  text-align: center;
+  border-top: 1px solid lightgray;
+  padding: 50px;
+}
+.comm-read-h1 {
+  font-weight: normal;
+  color: $orange;
+  font-size: 25px;
+}
+.comm-read-p {
+  color: $gray;
+  margin: 20px auto;
+  line-height: 30px;
+  font-size: 18px;
+}
+.comm-read-more {
+  color: $orange;
+  text-decoration: none;
+  font-family: "Lato";
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.commercial-accordion {
+  width: 100%;
+  background-color: $lightgray;
+  padding: 50px 0px;
+}
+.commercial-accordion-inner {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 800px;
+  align-items: center;
+}
+.flowers {
+  flex: 0 0 45%;
+}
+.accordion {
+  flex: 0 0 45%;
+}
+
+.accordion-wrapper {
+  font-family: "Lato";
+  color: $gray;
+  border-bottom: 1px solid lightgray;
+}
+
+.accordion-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  &.active {
+    color: $red;
+  }
+
+  &.active .icon-plus {
+    display: none;
+  }
+  &.active .icon-minus {
+    display: block;
+  }
+}
+
+.icon-minus {
+  display: none;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px 0;
+  line-height: 25px;
+
+  &.show {
+    display: block;
+  }
+}
