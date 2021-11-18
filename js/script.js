@@ -40,13 +40,22 @@ var quoteSwiper = new Swiper(".quoteSwiper", {
 });
 
 //--------COMMERCIAL SWIPER---------//
+
 var commSwiper = new Swiper(".commSwiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   centeredSlides: true,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
   },
 });
 

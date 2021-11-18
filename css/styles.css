@@ -703,9 +703,15 @@
 .commSwiper .swiper-slide-active:hover p {
   display: block;
 }
+.commSwiper .swiper-slide-active:hover h2 {
+  top: 35% !important;
+}
 .commSwiper .swiper-slide-next {
   filter: brightness(80%);
   transition: filter 1s;
+}
+.commSwiper .swiper-slide .swiper-image-div {
+  position: relative;
 }
 .commSwiper .swiper-slide img {
   display: block;
@@ -721,16 +727,15 @@
   font-weight: normal;
   display: none;
   color: white;
-  position: relative;
-  font-size: 40px;
-  top: -400px;
-  height: 0px;
+  position: absolute;
+  font-size: 35px;
+  top: 40%;
+  transform: translateY(-40%);
+  width: 100%;
 }
 .commSwiper .swiper-slide p {
-  margin: auto;
   line-height: 25px;
-  width: 70%;
-  top: -300px;
+  margin-top: 100px;
   font-size: initial;
 }
 .commSwiper .swiper-button-container {
