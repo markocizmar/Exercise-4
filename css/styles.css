@@ -199,13 +199,7 @@
   background-color: white;
 }
 
-@media screen and (max-width: 1400px) {
-  .nav-expandable {
-    width: 80%;
-    left: 10%;
-  }
-}
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .navbar {
     width: 80%;
   }
@@ -236,12 +230,7 @@
     padding-bottom: 0px;
   }
 }
-@media screen and (max-width: 700px) {
-  .nav-link {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .navbar {
     position: fixed;
     right: -110%;
@@ -411,33 +400,17 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 1300px) {
-  .headSwiper .swiper-text {
-    width: 350px;
+@media screen and (max-width: 1024px) {
+  .headSwiper .swiper-slide img {
+    min-height: 600px;
   }
-  .headSwiper .swiper-text-h1 {
-    font-size: 45px;
-  }
-}
-@media screen and (max-width: 1000px) {
   .headSwiper .swiper-text {
     width: 300px;
+    width: 50%;
+    left: 5%;
   }
   .headSwiper .swiper-text-h1 {
     font-size: 40px;
-  }
-  .headSwiper .swiper-text-p {
-    font-size: 14px;
-    line-height: 25px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .headSwiper .swiper-slide img {
-    min-height: 500px;
-  }
-  .headSwiper .swiper-text {
-    width: 50%;
-    left: 5%;
   }
   .headSwiper .swiper-text-p {
     font-size: 16px;
@@ -447,17 +420,15 @@
     margin-right: 5%;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .headSwiper .swiper-text {
     width: 90%;
   }
-}
-@media screen and (max-width: 500px) {
   .headSwiper .swiper-text-h1 {
-    font-size: 7vw;
+    font-size: 30px;
   }
   .headSwiper .swiper-text-p {
-    font-size: 4vw;
+    font-size: 14px;
     line-height: 25px;
   }
 }
@@ -571,7 +542,7 @@
   color: #7e868e;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .quoteSwiper {
     flex: 0 0 45%;
   }
@@ -589,7 +560,7 @@
     font-size: 2vw;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .quote-limiter {
     flex-direction: column;
     width: 90%;
@@ -668,7 +639,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .footer-container {
     margin: auto 50px;
     flex-direction: column;
@@ -679,7 +650,7 @@
     justify-content: space-between;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .footer {
     display: none;
   }
@@ -687,9 +658,7 @@
   .footer-1 {
     display: flex;
   }
-}
-@media screen and (max-width: 350px) {
-  .footer a {
-    font-size: 4vw;
+  .footer-1 a {
+    font-size: 14px;
   }
 }
