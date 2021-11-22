@@ -28,6 +28,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check:before {
+  content: "\e906";
+}
 .icon-minus:before {
   content: "\e904";
 }
@@ -116,9 +119,12 @@ $orange: #fe992a;
 $red: #e56c69;
 $gray: #7e868e;
 $lightgray: #f7f5f6;
+$mediumgray: #f6f6f8;
 
 @import "./nabvar";
 @import "./topslider";
 @import "./quoteslider";
 @import "./footer";
 @import "./commercial";
+@import "./resources";
+@import "./donate";

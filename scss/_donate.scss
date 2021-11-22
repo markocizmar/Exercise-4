@@ -1,0 +1,410 @@
+.checkout-section {
+  width: 100%;
+  background-color: $mediumgray;
+  padding: 50px 0;
+}
+
+.checkout-view {
+  display: none;
+  justify-content: space-evenly;
+  margin: 0px 15%;
+
+  &.show {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  @include tablet {
+    margin: 0 2%;
+  }
+
+  @include mobile {
+    margin: 0 5%;
+  }
+}
+
+.checkout-left {
+  flex: 0 0 40%;
+
+  @include tablet {
+    flex: 0 0 45%;
+  }
+
+  &.full {
+    flex: 0 0 80%;
+  }
+}
+
+.checkout-right {
+  flex: 0 0 40%;
+
+  @include tablet {
+    flex: 0 0 45%;
+  }
+}
+
+.checkout-h1 {
+  color: $orange;
+  width: 100%;
+  border-bottom: 1px solid $orange;
+  font-family: "Lato-light";
+  padding: 10px;
+  font-size: 30px;
+  margin-bottom: 20px;
+
+  @include mobile {
+    width: inherit;
+  }
+}
+
+.checkout-input {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  label {
+    font-family: "Lato";
+    color: $gray;
+    font-weight: bold;
+    width: 30%;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
+  }
+  input {
+    width: 70%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: $gray;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    &::placeholder {
+      font-family: "Lato-italic";
+      color: lightgray;
+    }
+  }
+}
+
+.checkout-dropdown {
+  width: 70%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.display-value {
+  position: relative;
+  background-color: white;
+  color: $gray;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  font-family: "Lato";
+  justify-content: space-between;
+  align-items: center;
+
+  .icon-cheveron-down {
+    color: $orange;
+  }
+}
+.select-container {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: $gray;
+  list-style-type: none;
+  display: none;
+  width: 150px;
+  padding-inline-start: 10px;
+  font-family: "Lato";
+
+  &.active {
+    display: block;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.select-option {
+  display: none;
+  height: 40px;
+  display: flex;
+  padding: 0 5px;
+  align-items: center;
+
+  &:hover {
+    color: $orange;
+    cursor: pointer;
+  }
+}
+
+.checkout-right-inner {
+  display: flex;
+  font-family: "Lato-bold";
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.checkout-inner-l {
+  flex: 0 0 30%;
+  margin-bottom: 15px;
+}
+.checkout-inner-r {
+  flex: 0 0 70%;
+}
+
+.donation-buttons {
+  display: block;
+  margin-bottom: 30px;
+  align-items: center;
+  width: 340px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.donation-lbl {
+  color: $gray;
+}
+
+.donation-btn {
+  padding: 15px 30px;
+  background-color: $gray;
+  border: none;
+  color: white;
+  font-family: "Lato";
+  font-size: 18px;
+
+  @include tablet {
+    width: 45%;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: $orange;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $orange;
+  }
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: $gray;
+  font-family: "Lato";
+
+  input {
+    display: none;
+
+    &:checked ~ .checkmark {
+      background-color: white;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 8px;
+      left: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $orange;
+    }
+  }
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: "Lato";
+  color: $gray;
+
+  input {
+    display: none;
+
+    &:checked ~ .checkbox {
+      background-color: $lightgray;
+
+      &.white {
+        background-color: white;
+      }
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+  .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $lightgray;
+
+    &.white {
+      background-color: white;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid $orange;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.next-step {
+  width: 50%;
+  float: right;
+  background-color: $orange;
+  font-family: "Lato";
+  padding: 15px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-top: 100px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    margin-top: 30px;
+  }
+
+  &:hover {
+    background-color: $gray;
+    cursor: pointer;
+  }
+}
+
+.checkout-left-p {
+  color: $gray;
+  font-family: "Lato";
+  a {
+    text-decoration: none;
+    color: $orange;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.checkout-p-top {
+  font-family: "Lato";
+  background-color: $orange;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.checkout-p-bottom {
+  font-family: "Lato";
+  color: $gray;
+  background-color: white;
+  border: 1px solid $orange;
+  padding: 15px;
+}
+.checkout-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+.checkout-inner-left {
+  flex: 0 0 45%;
+}
+.checkout-inner-right {
+  flex: 0 0 45%;
+}
+.checkout-5 {
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    margin-right: 50px;
+    margin-bottom: auto;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 30px;
+      width: 200px;
+    }
+  }
+
+  p {
+    font-family: "Lato";
+    font-weight: bold;
+    color: $gray;
+    margin-bottom: 20px;
+  }
+}

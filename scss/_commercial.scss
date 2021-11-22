@@ -76,12 +76,21 @@
       top: 40%;
       transform: translateY(-40%);
       width: 100%;
+
+      @media (max-width: 350px) {
+        font-size: 20px;
+      }
     }
 
     p {
       line-height: 25px;
       margin-top: 100px;
       font-size: initial;
+
+      @media (max-width: 350px) {
+        margin-top: 75px;
+        font-size: 14px;
+      }
     }
   }
 
@@ -104,6 +113,10 @@
   text-align: center;
   border-top: 1px solid lightgray;
   padding: 50px;
+
+  @media (max-width: 350px) {
+    padding: 50px 20px;
+  }
 }
 .comm-read-h1 {
   font-weight: normal;
@@ -138,12 +151,24 @@
   justify-content: space-between;
   max-width: 800px;
   align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 .flowers {
   flex: 0 0 45%;
+
+  @media (max-width: 350px) {
+    width: 100%;
+  }
 }
 .accordion {
   flex: 0 0 45%;
+
+  @include mobile {
+    margin: auto 50px;
+  }
 }
 
 .accordion-wrapper {

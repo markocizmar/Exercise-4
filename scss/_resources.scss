@@ -1,0 +1,145 @@
+@mixin banner-h {
+  background-color: white;
+  padding: 8px;
+  font-family: "Lato-light";
+}
+
+.resources-banner {
+  margin-top: 100px;
+}
+.res-banner-inner {
+  position: relative;
+}
+.res-banner-img {
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.res-banner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin-left: 20%;
+  bottom: 5%;
+
+  @include tablet {
+    margin-left: 1%;
+  }
+}
+.res-banner-h1 {
+  @include banner-h();
+  color: $orange;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.res-banner-h2 {
+  @include banner-h();
+  color: $gray;
+  font-size: 30px;
+  width: 135px;
+}
+
+//-----------checkout steps
+
+.checkout {
+  width: 100%;
+}
+.checkout-selector {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+.checkout-text {
+  transform: skew(-20deg);
+  display: flex;
+  position: relative;
+  color: $gray;
+  font-weight: bold;
+
+  @include mobile {
+    transform: skew(0deg);
+  }
+}
+
+.checkout-p {
+  margin-left: 5px;
+}
+
+.checkout-step {
+  display: flex;
+  position: relative;
+  background-color: $mediumgray;
+  font-family: "Lato";
+  margin: 0px 1px;
+  padding: 10px 20px;
+  transform: skew(20deg);
+
+  @include mobile {
+    transform: skew(0deg);
+  }
+
+  &[data-completed="1"] {
+    background-color: $orange;
+    .checkout-text {
+      color: white;
+    }
+    &.cs1::before {
+      background-color: $orange;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $red;
+    .checkout-text {
+      color: white;
+    }
+  }
+  &.passed {
+    background-color: $orange;
+    .checkout-text {
+      color: white;
+    }
+  }
+}
+
+@mixin cs-limiter {
+  height: 100%;
+  width: 20%;
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: $red;
+  top: 0;
+  left: -15px;
+  transform: skew(-20deg);
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.cs1::before {
+  @include cs-limiter();
+}
+
+.cs5::after {
+  @include cs-limiter();
+  background-color: $mediumgray;
+  left: auto;
+  right: -20px;
+
+  &.done {
+    background-color: $red;
+  }
+}
+
+.checkout-p {
+  @include mobile {
+    display: none;
+  }
+}
