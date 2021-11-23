@@ -20,11 +20,11 @@
   display: flex;
   position: absolute;
   flex-direction: column;
-  margin-left: 20%;
+  left: 20%;
   bottom: 5%;
 
   @include tablet {
-    margin-left: 1%;
+    left: 1%;
   }
 }
 .res-banner-h1 {

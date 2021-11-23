@@ -85,7 +85,6 @@ function hideView(array) {
 }
 
 function showView(id, e) {
-  hideView(btn);
   hideView(view);
   document.getElementById(id).classList.add("show");
 }
@@ -114,24 +113,7 @@ function changeColor() {
   this.classList.add("active");
 }
 
-//--------------DONATIONS DROPDOWN------------//
-
-var isOpen = false;
-
-function toggleOptions(e) {
-  isOpen = !isOpen;
-  if (isOpen) {
-    document.getElementById("selectContainer").classList.add("active");
-  } else {
-    document.getElementById("selectContainer").classList.remove("active");
-  }
-}
-
-function selected(val) {
-  document.getElementById("valueText").innerHTML = val;
-  document.getElementById("selectedValue").val = val;
-  toggleOptions();
-}
+//--------------PAGE CHANGER-----------//
 
 const chview = document.querySelectorAll(".checkout-view");
 

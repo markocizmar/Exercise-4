@@ -70,6 +70,18 @@
     align-items: start;
   }
 
+  &.short {
+    input {
+      width: 40%;
+    }
+  }
+
+  &.card {
+    input {
+      width: 10%;
+    }
+  }
+
   label {
     font-family: "Lato";
     color: $gray;
@@ -85,6 +97,7 @@
     height: 50px;
     border: none;
     outline: none;
+    padding: 0;
     padding-left: 10px;
     color: $gray;
 
@@ -99,58 +112,38 @@
   }
 }
 
+.card-divider {
+  margin: 10px;
+}
+.cvv-container {
+  background-color: white;
+  position: absolute;
+  display: none;
+}
+.cvv {
+  margin: 10px;
+}
+.question {
+  font-family: "Lato";
+  color: $orange;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover + .cvv-container {
+    display: block;
+  }
+}
+
 .checkout-dropdown {
-  width: 70%;
+  width: 40%;
+  height: 50px;
+  border: none;
+  padding-left: 10px;
+  outline: none;
 
   @include tablet {
     width: 100%;
-  }
-}
-
-.display-value {
-  position: relative;
-  background-color: white;
-  color: $gray;
-  padding: 16px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  font-family: "Lato";
-  justify-content: space-between;
-  align-items: center;
-
-  .icon-cheveron-down {
-    color: $orange;
-  }
-}
-.select-container {
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  color: $gray;
-  list-style-type: none;
-  display: none;
-  width: 150px;
-  padding-inline-start: 10px;
-  font-family: "Lato";
-
-  &.active {
-    display: block;
-  }
-  &:focus {
-    outline: none;
-  }
-}
-.select-option {
-  display: none;
-  height: 40px;
-  display: flex;
-  padding: 0 5px;
-  align-items: center;
-
-  &:hover {
-    color: $orange;
-    cursor: pointer;
   }
 }
 

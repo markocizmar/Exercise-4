@@ -164,16 +164,10 @@
                 <h1 class="checkout-h1">About you</h1>
                 <div class="checkout-input">
                     <label>Title</label>
-                    <div class="checkout-dropdown">
-                        <input name="select_value" type="hidden" id="selectedValue">
-                        <div class="display-value" id="displayValue" onclick="toggleOptions(event)">
-                            <span id="valueText">Select</span><span class="icon-cheveron-down"></span>
-                        </div>
-                        <ul class="select-container" id="selectContainer" onblur="toggleOptions(event)">
-                            <li class="select-option" onclick="selected('Mr')">Mr</li>
-                            <li class="select-option" onclick="selected('Mrs')">Mrs</li>
-                        </ul>
-                    </div>
+                    <select name="title" class="checkout-dropdown">
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                    </select>
                 </div>
                 <div class="checkout-input">
                     <label for="fname">First name</label>
@@ -227,56 +221,50 @@
                 <h1 class="checkout-h1">Personal details</h1>
                 <div class="checkout-input">
                     <label>Title</label>
-                    <div class="checkout-dropdown">
-                        <input name="select_value" type="hidden" id="selectedValue">
-                        <div class="display-value" id="displayValue" onclick="toggleOptions(event)">
-                            <span id="valueText">Select</span><span class="icon-cheveron-down"></span>
-                        </div>
-                        <ul class="select-container" id="selectContainer" onblur="toggleOptions(event)">
-                            <li class="select-option" onclick="selected('Mr')">Mr</li>
-                            <li class="select-option" onclick="selected('Mrs')">Mrs</li>
-                        </ul>
-                    </div>
+                    <select name="title" class="checkout-dropdown">
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                    </select>
                 </div>
                 <div class="checkout-input">
                     <label for="ffname">First name</label>
-                    <input type="text" id="ffname" required>
+                    <input type="text" id="ffname" placeholder="Enter your name" required>
                 </div>
                 <div class="checkout-input">
                     <label for="llname">Last name</label>
-                    <input type="text" id="llname" required>
+                    <input type="text" id="llname" placeholder="Enter your last name" required>
                 </div>
                 <div class="checkout-input">
                     <label for="eemail">Email</label>
-                    <input type="email" id="eemail" required>
+                    <input type="email" id="eemail" placeholder="Enter your email address" required>
                 </div>
                 <div class="checkout-input">
                     <label for="mphone">Mobile</label>
-                    <input type="number" id="mphone" required>
+                    <input type="number" id="mphone" placeholder="Enter your mobile phone number" required>
                 </div>
             </div>
             <div class="checkout-right">
                 <h1 class="checkout-h1">Billing address</h1>
                 <div class="checkout-right">
-                    <div class="checkout-input">
+                    <div class="checkout-input short">
                         <label for="postcode">Postcode</label>
-                        <input type="text" id="postcode" required>
+                        <input type="text" id="postcode" placeholder="Postcode" required>
                     </div>
-                    <div class="checkout-input">
+                    <div class="checkout-input short">
                         <label for="house">House number</label>
-                        <input type="number" id="house" required>
+                        <input type="number" id="house" placeholder="House number" required>
                     </div>
                     <div class="checkout-input">
                         <label for="street">Street</label>
-                        <input type="text" id="street" required>
+                        <input type="text" id="street" placeholder="Enter your street name" required>
                     </div>
                     <div class="checkout-input">
                         <label for="city">City</label>
-                        <input type="text" id="city" required>
+                        <input type="text" id="city" placeholder="Enter your city name" required>
                     </div>
                     <div class="checkout-input">
                         <label for="country">Country</label>
-                        <input type="text" id="country" required>
+                        <input type="text" id="country" placeholder="Enter your country name" required>
                     </div>
                     <label class="container">We would like to keep you updated about our work. To do so we'll use
                         the details you've provided, but we promise to never share them with other organizations. If
@@ -298,19 +286,23 @@
                 <br>
                 <div class="checkout-input">
                     <label for="accname">Name of Account holder</label>
-                    <input type="text" id="accname" required>
+                    <input type="text" id="accname" placeholder="The name on the card" required>
                 </div>
                 <div class="checkout-input">
                     <label for="accnum">Account number</label>
-                    <input type="number" id="accnum" required>
+                    <input type="number" id="accnum" placeholder="Your account number" required>
                 </div>
-                <div class="checkout-input">
+                <div class="checkout-input card">
                     <label for="sortcode">Sort code</label>
+                    <input type="text" id="sortcode" required>
+                    <span class="card-divider"></span>
+                    <input type="text" id="sortcode" required>
+                    <span class="card-divider"></span>
                     <input type="text" id="sortcode" required>
                 </div>
                 <div class="checkout-input">
                     <label for="donation">Your donation</label>
-                    <input type="text" id="donation" required>
+                    <input type="text" id="donation" placeholder="Enter your donation" required>
                 </div>
                 <div class="checkout-input">
                     <label>Payment date</label>
@@ -326,16 +318,10 @@
                 </div>
                 <div class="checkout-input">
                     <label>Payment frequency</label>
-                    <div class="checkout-dropdown">
-                        <input name="select_value" type="hidden" id="selectedValue">
-                        <div class="display-value" id="displayValue" onclick="toggleOptions(event)">
-                            <span id="valueText">Select</span><span class="icon-cheveron-down"></span>
-                        </div>
-                        <ul class="select-container" id="selectContainer" onblur="toggleOptions(event)">
-                            <li class="select-option" onclick="selected('Monthly')">Monthly</li>
-                            <li class="select-option" onclick="selected('Yearly')">Yearly</li>
-                        </ul>
-                    </div>
+                    <select name="title" class="checkout-dropdown">
+                        <option value="Monthly">Monthly</option>
+                        <option value="Yearly">Yearly</option>
+                    </select>
                 </div>
                 <label class="checkbox-container">I confirm that I am the account holder and the only person required to
                     authorise debits from this account.
@@ -377,46 +363,49 @@
                     <div class="checkout-inner-left">
                         <div class="checkout-input">
                             <label>Card type</label>
-                            <div class="checkout-dropdown">
-                                <input name="select_value" type="hidden" id="selectedValue">
-                                <div class="display-value" id="displayValue" onclick="toggleOptions(event)">
-                                    <span id="valueText">Select</span><span class="icon-cheveron-down"></span>
-                                </div>
-                                <ul class="select-container" id="selectContainer" onblur="toggleOptions(event)">
-                                    <li class="select-option" onclick="selected('Visa Debit')">Visa Debit</li>
-                                    <li class="select-option" onclick="selected('Mastercard')">Mastercard</li>
-                                </ul>
-                            </div>
+                            <select name="title" class="checkout-dropdown">
+                                <option value="Visa debit">Visa debit</option>
+                                <option value="Mastercard">Mastercard</option>
+                            </select>
                         </div>
                         <div class="checkout-input">
                             <label for="cnum">Card number</label>
-                            <input type="number" id="cnum" required>
+                            <input type="number" id="cnum" placeholder="Enter your card number" required>
                         </div>
                         <div class="checkout-input">
                             <label for="finame">First name</label>
-                            <input type="text" id="finame" required>
+                            <input type="text" id="finame" placeholder="Enter your name" required>
                         </div>
                         <div class="checkout-input">
                             <label for="surname">Surname</label>
-                            <input type="text" id="surname" required>
+                            <input type="text" id="surname" placeholder="Enter your surname" required>
                         </div>
                     </div>
                     <div class="checkout-inner-right">
-                        <div class="checkout-input">
+                        <div class="checkout-input card">
                             <label for="valf">Valid from</label>
                             <input type="number" id="valf" required>
+                            <span class="card-divider">/</span>
+                            <input type="number" required>
                         </div>
-                        <div class="checkout-input">
+                        <div class="checkout-input card">
                             <label for="expd">Expiry date</label>
                             <input type="number" id="expd" required>
+                            <span class="card-divider">/</span>
+                            <input type="number" required>
                         </div>
-                        <div class="checkout-input">
+                        <div class="checkout-input short">
                             <label for="isnum">Issue number</label>
                             <input type="number" id="isnum" required>
                         </div>
-                        <div class="checkout-input">
+                        <div class="checkout-input short">
                             <label for="scode">Security code</label>
                             <input type="number" id="scode" required>
+
+                            <span class="question">?</span>
+                            <div class="cvv-container">
+                                <img class="cvv" src="./img/CVV.png" alt="CVV">
+                            </div>
                         </div>
                         <button class="next-step">FINISH</button>
                     </div>
