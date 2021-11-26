@@ -2,6 +2,7 @@
   background-color: white;
   padding: 8px;
   font-family: "Lato-light";
+  width: 180px;
 }
 
 .resources-banner {
@@ -16,16 +17,22 @@
   object-fit: cover;
 }
 
-.res-banner {
+.res-ban {
   display: flex;
-  position: absolute;
+  position: relative;
+  height: 0;
   flex-direction: column;
-  left: 20%;
-  bottom: 5%;
+  bottom: 150px;
+  width: 98%;
 
   @include tablet {
     left: 1%;
   }
+}
+.res-ban-in {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 .res-banner-h1 {
   @include banner-h();
@@ -39,8 +46,6 @@
   font-size: 30px;
   width: 135px;
 }
-
-//-----------checkout steps
 
 .checkout {
   width: 100%;
@@ -87,6 +92,9 @@
     &.cs1::before {
       background-color: $orange;
     }
+    &.cs4 ~ .cs5::after {
+      background-color: $red;
+    }
   }
 
   &:hover {
@@ -132,10 +140,6 @@
   background-color: $mediumgray;
   left: auto;
   right: -20px;
-
-  &.done {
-    background-color: $red;
-  }
 }
 
 .checkout-p {

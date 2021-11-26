@@ -6,8 +6,9 @@
 
 .checkout-view {
   display: none;
-  justify-content: space-evenly;
-  margin: 0px 15%;
+  justify-content: space-between;
+  margin: 0px auto;
+  max-width: 1150px;
 
   &.show {
     display: flex;
